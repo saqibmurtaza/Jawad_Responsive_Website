@@ -2,13 +2,16 @@ body {
     font-family: Graphik Web;
     margin: 0;
     padding-top: 50px;
+    min-height: 100vh; /* Minimum height to full viewport height */
+}
+main { 
+    flex: 1; /* Flex to take up the remaining space */ 
 }
 
 #homeLink {
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit the text color from the parent element */
 }
-
 /********************* Menu Code*******************************/
 .menuContainer {
     display: flex;
@@ -47,7 +50,6 @@ body {
     padding: 0 15px;
     transition: transform 0.3s; /* Add a transition for smooth icon change */
 }
-
 .bar {
     width: 35px;
     height: 4px;
@@ -55,7 +57,6 @@ body {
     margin: 6px 0;
     transition: 0.4s;
 }
-
 .hamburger.active {
     background-color: transparent;
 }
@@ -72,18 +73,15 @@ body {
 .hamburger.active .bar:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
 }
-
 /***********Hamburger styles End*/
 
 /* Style for the menu that appears when the hamburger icon is clicked */
-
 .menu {
     display: none;
     position: absolute;
-    background-color: #fff !important;
+    background-color: #fff;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    top: 58px;
 }
 
 .menu a {
@@ -104,17 +102,15 @@ body {
     left: 100%;
     top: 90px;
 }
-
 /* Adjust the margin-top as needed */
 .submenu.active + .menu {
     padding-top: 20px; /* Adjust as needed */
 }
 
-/* Indent Tables Subcategories */
+/*Indent Tables Subcategories*/
 .sub-submenu {
     padding-left: 0; /* Adjust as needed */
 }
-
 .submenu:hover .sub-submenu {
     display: block;
 }
@@ -129,15 +125,13 @@ body {
 .menu .submenu.active .sub-submenu {
     display: block;
 }
-
 /* Show the menu when the anchor is clicked */
 .hamburger.active + .menu {
     display: block;
     transform: translateY(0); /* Add a transition for smooth dropdown */
 }
 
-/****************************** Menu End *******************/
-
+/****************************** Menu End*******************/
 main h3{
     text-align: center;
 }
@@ -157,6 +151,7 @@ img{
     width: 100%;
     height: auto;
 }
+
 /***********TEXT HEADING FOR EACH SECTION************/
 .text{
     margin: 20px 0;
@@ -171,9 +166,8 @@ img{
 .text p {
     margin: 0; /* Remove any margin around the p element */
 }
-/****************************** Menu End*******************/
-/******************************Slide Show*******************/
 
+/******************************Slide Show*******************/
 .slideshow-container {
     background-color: #FAF9F7;
     max-width: 500px;
@@ -204,7 +198,6 @@ img{
 
 /******************************Slide Show End*******************/
 /***********************SCROLL BAR FEATURED PRODUCTS START***********************/
-
 #featured-products{
     background-color: white; /* Background color for the section */
     margin: 10px;
@@ -226,6 +219,7 @@ img{
     background-color: lightgrey; /* Light grey color for the scrollbar thumb */
     border-radius: 6px; /* Round the corners of the thumb */
 }
+
 .product {
     width: 250px; /* Adjust the width as needed for your design */
     height: 200px; /* This creates square boxes */
@@ -237,10 +231,12 @@ img{
     white-space: normal; /* Allow text content to wrap */
     position: relative;
 }
+
 .product:hover {
     transform: scale(1.05); /* Enlarge the product on hover */
     opacity: 0.8;
 }
+
 .product img {
     max-width: 100%; /* Ensure images don't exceed the container width */
     height: auto; /* Maintain image aspect ratio */
@@ -288,7 +284,6 @@ img{
 }
 
 /********** Four Images in One Container - End *****************/
-
 /**************** Last Section**************************/
 .main-container-2 {
     display: flex;
@@ -299,25 +294,23 @@ img{
 .image-container-2 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
     border: 1px solid #fff;
 }
 
 .image-container-2 a {
-    flex: 1 1 30%; /* Use flex-grow, flex-shrink, and flex-basis */
-    margin: 10px; /* Add some margin for spacing */
+    width: 48%; /* Two images in a row */
     text-decoration: none; /* Remove the underline for links */
     display: block; /* Make the links block-level for consistent layout */
 }
 
 .image-container-2 img {
     width: 100%; /* Full width for images within links */
-    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
 }
 
-/* Media query for smaller screens (tablets and below) */
 @media (max-width: 768px) {
     .main-container-2 {
         flex-direction: column;
@@ -326,17 +319,8 @@ img{
         width: 100%;
         max-width: none;
     }
-    .image-container-2 a {
-        flex: 1 1 100%; /* Full width for images */
-    }
 }
 
-/* Media query for larger screens (desktops) */
-@media (min-width: 769px) {
-    .image-container-2 a {
-        flex: 1 1 30%; /* Three columns */
-    }
-}
 
 /* Footer Styles */
 footer {
@@ -375,6 +359,7 @@ footer {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 /* Styles for the email placeholder */
 .email-section .email-placeholder {
     background-color: #D3D3D3;
@@ -386,7 +371,7 @@ footer {
     width: 50%;
     margin-left: 20px;
     padding: 15px;
-    border: 1px so #050505;
+    border: 1px solid #050505;
     color: #0b0b0b;
 }
 
@@ -431,7 +416,7 @@ footer {
     padding: 5px 10px;
     white-space: nowrap;
     opacity: 0;
-    transition: opacity 3s;
+    transition: opacity 0.3s;
     pointer-events: none;
 }
 
@@ -441,27 +426,49 @@ footer {
 
 .social-icon:hover i {
     opacity: 0;
-    transition: opacity 2s;
+    transition: opacity 0.3s;
 }
+
 @media (max-width: 768px) {
     .social-icon .hover-message {
         display: none;
     }
 }
-/*************************ABOUT SECTION****************************/
-/* Styles for the About Section */
-.about {
-    padding: 5% 5%;
-    width: 850px;
-    text-align: justify;
+/* 00000000000000000000000000000000000000000000000000000 */
+
+/**************** Last Section**************************/
+.main-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
 }
 
+.image-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid #fff;
+}
 
-/* Media query for screens smaller than 768px */
-@media screen and (max-width: 768px) {
-    .about {
-        width: 100%; /* Make the section full-width on smaller screens */
-        padding: 10%; /* Adjust padding for smaller screens */
-        box-sizing: border-box;
+.image-container-2 a {
+    width: 48%; /* Two images in a row */
+    text-decoration: none; /* Remove the underline for links */
+    display: block; /* Make the links block-level for consistent layout */
+}
+
+.image-container-2 img {
+    width: 100%; /* Full width for images within links */
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .main-container-2 {
+        flex-direction: column;
+    }
+    .image-container-2 {
+        width: 100%;
+        max-width: none;
     }
 }

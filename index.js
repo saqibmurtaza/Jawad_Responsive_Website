@@ -36,3 +36,4 @@ function toggleMenu(event) {
 
     // Start the slideshow
     showSlides();
+

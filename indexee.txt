@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Furniture Store</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/9964243f66.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="menuContainer">
-        <div class="itemMenu">
+        <div cass="itemMenu">
             <!-- Checkbox input for toggling the menu -->
             <a href="#" class="hamburger" onclick="toggleMenu(event)">
                 <div class="bar"></div>
@@ -17,7 +18,7 @@
                 <div class="bar"></div>
             </a>        
             <!-- The menu -->
-            <div id="menu" class="menu">
+            <div class="menu">
                 <a href="index.html">Home</a>
                 <a href="livingroom.html">Living Room</a>
                 <div class="submenu">
@@ -50,30 +51,15 @@
            </div>
             <!-- Slide 1 -->
             <div class="mySlides">
-                <img src="selectedPics/CLIENT/C0.png" alt="Slide 1">
+                <img src="selectedPics/CLIENT/centre table.jpeg" alt="Slide 1">
             </div>
             <!-- Slide 2 -->
             <div class="mySlides">
-                <img src="selectedPics/CLIENT/C2.jpeg" alt="Slide 2">
-            </div>
-            <!-- Slide 3 -->
-            <div class="mySlides">
-                <img src="selectedPics/CLIENT/C3.jpeg" alt="Slide 3">
-            </div>
-            <!-- Slide 4 -->
-            <div class="mySlides">
-                <img src="selectedPics/CLIENT/C4.jpeg" alt="Slide 4">
-            </div>
-            <!-- Slide 5 -->
-            <div class="mySlides">
-                <img src="selectedPics/CLIENT/roundtable-1.jpg" alt="Slide 5">
+                <img src="selectedPics/CLIENT/console.jpeg" alt="Slide 2">
             </div>
             <!-- Add more slides as needed -->
-            
             <!-- Navigation dots -->
             <div style="text-align:center">
-                <span class="dot"></span>
-                <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <!-- Add more dots for additional slides -->
@@ -86,7 +72,7 @@
         </div>
         
         <section id="featured-products">
-            <div class="product">
+        <div class="product">
                 <div class="product-content">
                     <a href="http://127.0.0.1:3000/livingroom.html">
                         <img src="selectedPics/sofa.webp" alt="Sofa">
@@ -126,7 +112,7 @@
         <section>
             <div class="main-container">
                 <div class="image-container">
-                    <a href="http://127.0.0.1:3000/consoles.html">
+                    <a href="http://127.0.0.1:3000/livingroom.html">
                         <img class="single-image" src="selectedPics/C1.jpeg" alt="Single Image">
                     </a>
                 </div>
@@ -149,8 +135,8 @@
                     </div>
                 </div>
             </div>
+            
         </section>
-        
         <section>
             <div class="text">
                 <h2>Extremely Beautiful Veneer-Inlay Craftsmanship</h2>
@@ -174,27 +160,22 @@
                     </a>
                 </div>
                 <div class="image-container-2">
-                    <a href="http://127.0.0.1:3000/accenttables.html">
-                        <img src="selectedPics/TTT.jpg" alt="Image 5">
+                    <a href="http://127.0.0.1:3000/livingroom.html">
+                        <img src="selectedPics/TT.webp" alt="Image 5">
                     </a>
                     <a href="http://127.0.0.1:3000/accenttables.html">
                         <img src="selectedPics/ET3.webp" alt="Image 6">
                     </a>
                 </div>
-                <div class="image-container-2">
-                    <a href="http://127.0.0.1:3000/diningtables.html">
-                        <img src="selectedPics/DT7.jpg" alt="Image 5">
-                    </a>
-                    <a href="http://127.0.0.1:3000/diningtables.html">
-                        <img src="selectedPics/DT3.jpg" alt="Image 6">
-                    </a>
-                </div>
-
                 <!-- You can continue adding more image containers as needed -->
             </div>
+            
         </section>
+
     </main>
-    <script src="index.js"></script> 
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
 </body>
 <!-- Footer -->
 <footer>
