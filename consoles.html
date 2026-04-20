@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Furniture Store</title>
     <link rel="stylesheet" href="consoles.css">
-    <script src="https://kit.fontawesome.com/9964243f66.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://kit.fontawesome.com/9964243f66.js" crossorigin="anonymous"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1XG9NHYBR">
     </script>
@@ -20,7 +21,7 @@
 
 <body>
     <header class="menuContainer">
-        <div cass="itemMenu">
+        <div class="itemMenu">
             <!-- Checkbox input for toggling the menu -->
             <a href="#" class="hamburger" onclick="toggleMenu(event)">
                 <div class="bar"></div>
@@ -28,7 +29,7 @@
                 <div class="bar"></div>
             </a>        
             <!-- The menu -->
-            <div class="menu">
+            <div id="menu" class="menu">
                 <a href="index.html">Home</a>
                 <a href="livingroom.html">Living Room</a>
                 <div class="submenu">
@@ -62,42 +63,42 @@
             <div class="mainContainer">
                 <div class="tables-container">
                     <div class="tables-img tables-img-1">
-                        <img src="selectedPics/C1.jpeg" alt="img1">
+                        <img loading="lazy" decoding="async" src="selectedPics/C1.jpeg" alt="img1">
                         <div class="tableProduct-content">
                             <p>Console Table | Made to order</p>
                             <P>Contact us for more info</P>
                         </div>
                 </div>
                 <div class="tables-img tables-img-2">
-                    <img src="selectedPics/HPT.jpg" alt="img2">
+                    <img loading="lazy" decoding="async" src="selectedPics/HPT.jpg" alt="img2">
                     <div class="tableProduct-content">
                         <p>Console Table | Made to order</p>
                         <P>Contact us for more info</P>
                     </div>
                 </div>
                 <div class="tables-img tables-img-3">
-                    <img src="selectedPics/WMC.webp" alt="img3">
+                    <img loading="lazy" decoding="async" src="selectedPics/WMC.webp" alt="img3">
                     <div class="tableProduct-content">
                         <p>Wall-mounted | Made to order</p>
                         <P>Contact us for more info</P>
                     </div>
                 </div>
                 <div class="tables-img tables-img-3">
-                    <img src="selectedPics/C6.jpg" alt="img4">
+                    <img loading="lazy" decoding="async" src="selectedPics/C6.jpg" alt="img4">
                     <div class="tableProduct-content">
                         <p>Console Table | Made to order</p>
                         <P>Contact us for more info</P>
                     </div>
                 </div>
                 <div class="tables-img tables-img-3">
-                    <img src="selectedPics/C4.jpg" alt="img5">
+                    <img loading="lazy" decoding="async" src="selectedPics/C4.jpg" alt="img5">
                     <div class="tableProduct-content">
                         <p>Console Table | Made to order</p>
                         <P>Contact us for more info</P>
                     </div>
                 </div>
                 <div class="tables-img tables-img-3">
-                    <img src="selectedPics/C7.jpg" alt="img6">
+                    <img loading="lazy" decoding="async" src="selectedPics/C7.jpg" alt="img6">
                     <div class="tableProduct-content">
                         <p>Console Table | Made to order</p>
                         <P>Contact us for more info</P>
@@ -113,21 +114,21 @@
             <div class="mainContainer">
                 <div class="tables-container">
                     <div class="tables-img tables-img-1">
-                        <img src="selectedPics/SCT0.jpg" alt="img1">
+                        <img loading="lazy" decoding="async" src="selectedPics/SCT0.jpg" alt="img1">
                         <div class="tableProduct-content">
                             <p>Storage Console | Made to order</p>
                             <P>Contact us for more info</P>
                         </div>
                 </div>
                 <div class="tables-img tables-img-2">
-                    <img src="selectedPics/SCT1.jpg" alt="img2">
+                    <img loading="lazy" decoding="async" src="selectedPics/SCT1.jpg" alt="img2">
                     <div class="tableProduct-content">
                         <p>Storage Console | Made to order</p>
                         <P>Contact us for more info</P>
                     </div>
                 </div>
                 <div class="tables-img tables-img-2">
-                    <img src="selectedPics/SCT2.jpg" alt="img2">
+                    <img loading="lazy" decoding="async" src="selectedPics/SCT2.jpg" alt="img2">
                     <div class="tableProduct-content">
                         <p>Storage Console | Made to order</p>
                         <P>Contact us for more info</P>
@@ -136,7 +137,6 @@
                 
         </section>
     </main>
-    <script src="index.js"></script>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -157,6 +157,7 @@
         });
         });
     </script>
+    <script src="index.js"></script>
 </body>
 <footer>
     <div class="footer-columns">
@@ -204,3 +205,4 @@
 
 </footer>
 </html>
+
