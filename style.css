@@ -175,21 +175,46 @@ main > div {
 }
 
 #featured-products {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+    display: flex !important;
+    flex-direction: row;
     gap: 1rem;
     margin: 1rem 0 !important;
-    padding: 0 !important;
-    overflow: visible !important;
-    white-space: normal !important;
+    padding: 0 3rem 0 1rem !important; /* Increased right padding to partially hide last item */
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar on Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar on IE/Edge */
+    position: relative; /* For positioning the gradient */
+}
+
+#featured-products::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on Webkit browsers */
+}
+
+#featured-products::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    pointer-events: none; /* Prevent interference with scrolling */
 }
 
 .product {
-    width: auto !important;
+    width: 250px !important;
     height: auto !important;
     margin: 0 !important;
     display: block !important;
     border-radius: 18px;
+    flex-shrink: 0; /* Prevent products from shrinking */
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
     overflow: hidden;
     aspect-ratio: 4 / 3;
 }
